@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exhibition</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+    
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">HOME</a>
+            <a href="introduction.html">INTRODUCTION</a>
+            <a href="exhibition.html">EXHIBITION</a>
+            <a href="exploring.html">EXPLORING</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i></a>
+        </div>
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+        
+<div class="container-fluid-1 mt-3">
+    <div class="container-fluid-1">
+        <div class="row" id="index-row">
+        <div class="col-sm-4" id="exhibit">
+            <h1>Pattern's Name</h1>
+            <p>Lorem ipsum dolor sit amet, in nibh invidunt sea, nec ex homero maluisset, pro ut laboramus instructior. Qui no praesent dignissim, suas exerci invenire pro cu, consul maluisset ne cum. At augue affert mea, ei duo porro consectetuer. Vis dicta detraxit salutandi te. Appareat apeirian nam cu. Purto perfecto iracundia ad mel, suscipit accusamus te sit. Justo appellantur eam ei.Id pro populo senserit. Eam probo singulis iracundia id, graecis tacimates at ius. Dicit mentitum quo no. Odio debet partem per eu, sea agam impedit cu. Ex semper detraxit qui.</p>
+        </div>
+            
+        <div class="col-sm-8" id="index-info">
+            <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('Animals')"> Animals</button>
+  <button class="btn" onclick="filterSelection('Deformed animals')"> Deformed animals</button>
+  <button class="btn" onclick="filterSelection('Geometric patterns')"> Geometric patterns</button>
+  <button class="btn" onclick="filterSelection('Potraits')"> Potraits</button>
+</div>
+
+<div class="container">
+<div class="row"> 
+ <div class="column">
+  <div class="filterDiv Animals">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/%E5%85%BD%E9%9D%A2%E7%BA%B9%E9%93%9905019.jpg" style="width:100%" class="image">
+  <div class="overlay"><a href="#Mythical Animal Face">Mythical Animal Face</a></div>
+  </div>
+  
+  <div class="filterDiv Animals Deformed animals">
+  <img src="image/gallary/bird.jpg" style="width:100%">
+  <div class="overlay"><a href="exploring.html">Birds</a></div>
+  </div>
+  
+  <div class="filterDiv Animals">
+  <img src="image/gallary/kui.png" style="width:100%">
+  <div class="overlay"><a href="#Kui">Kui</a></div>
+  </div>
+</div>
+    
+<div class="column"> 
+  <div class="filterDiv Animals">
+  <img src="http://60.173.0.247:8003/TongLingMuseum/DEM_EXHIBIT_IMG/2019-01-07/Thumb500/636824720757695312.png" style="width:100%">
+  <div class="overlay"><a href="#Snakes">Snakes</a></div>
+  </div>
+  
+  <div class="filterDiv Animals">
+  <img src="https://n.sinaimg.cn/sinakd10110/680/w1200h1080/20210111/f028-khmynua2869844.jpg" style="width:100%">
+  <div class="overlay"><a href="#Chi">Chi</a></div>
+  </div>
+  
+  <div class="filterDiv Animals Geometric patterns">
+  <img src="http://61.134.53.202:81/CRFDPIC/r200606289/r200606289.0166.bfb209.jpg" style="width:100%">
+  <div class="overlay"><a href="#Hui">Hui</a></div>
+  </div>
+    </div>
+   
+<div class="column">
+  <div class="filterDiv Animals">
+  <img src="https://wx2.sinaimg.cn/large/4b443865gy1gygnqfrdm9j22bc1jkqv9.jpg" style="width:100%">
+  <div class="overlay"><a href="#Coiling Animals">Coiling Animals</a></div>
+  </div>
+  
+  <div class="filterDiv Animals">
+  <img src="image/gallary/deer.jpg" style="width:100%">
+  <div class="overlay"><a href="#Specific Animals">Specific Animals</a></div>
+  </div>
+
+  <div class="filterDiv Animals Deformed animals">
+  <img src="image/gallary/elephant.jpg" style="width:100%">
+  <div class="overlay"><a href="#Sculpture Animals">Sculpture Animals</a></div>
+  </div>
+ </div>
+  
+</div>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+         </div>    
+        </div>
+    </div>
+</div>
+                  
+  
+        <footer class="footer">Copyright@Web Technology prototype</footer>
+
+                           
+        
+        
+        
+    
+    </body>
+</html>

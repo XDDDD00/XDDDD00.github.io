@@ -1,0 +1,533 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+    background-color: #4F6457;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgba(116,154,137,50%);
+    margin-bottom: 60px;
+}
+
+.topnav a {
+    float:left;
+    display:block;
+  color: white;
+    text-align: center;
+  margin: 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  border-bottom: 2px solid whitesmoke;
+    color:whitesmoke;
+}
+
+.topnav a.active {
+  background-color: transparent;
+  color: white;
+    border-bottom: 2px solid white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+footer {
+  background-color: black;
+    margin-top: 40px;
+  padding: 10px;
+  text-align: center;
+    color:white;
+}
+
+
+#index-info p{
+    text-align: justify;
+    color:white;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#index-info h1{
+    color:#D9B44A;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#index-row h1{
+	color:#D9B44A;
+	margin-bottom: 24px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#exhibit p{
+    text-align: justify;
+    color:white;
+    padding:10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color:rgba(117,177,169,0.5);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+}
+
+.bt-container {
+  height: 40px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.index-bt {
+  background-color: #D9B44A;
+  border: none;
+    width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.index-bt a{
+    color: white;
+    text-decoration: none;
+}
+
+.index-bt a:hover{
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 576px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+      position:absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+<!----- This code comes from https://codepen.io/hellolorem/pen/VwvMeoz ----- >
+.container_fluid-2{
+	background-color:rgba(188,194,187,0.5);
+	height:50%;
+	margin-top:20px;
+    margin-bottom: 60px;
+}
+
+.imageMap__container {
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  position: relative;
+}
+.imageMap__container img {
+  max-width: 90%;
+  max-height:90%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  pointer-events: none;
+  overflow: hidden;
+  margin: auto;
+}
+
+.markers {
+    background: rgba(255,255,255,.7);
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgba(255,255,255,.5);
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    animation: ownpulse 3s cubic-bezier(.19,1,.22,1) infinite both;
+  position: relative;
+}
+.markers:focus-within .marker__card, .markers:focus .marker__card {
+	display: block;
+}
+
+.markers:focus-within .marker__card_2, .markers:focus .marker__card_2 {
+	display: block;
+}
+
+.markers:focus-within .marker__card_3, .markers:focus .marker__card_3 {
+	display: block;
+}
+
+.markers:focus-within .marker__card_4, .markers:focus .marker__card_4 {
+	display: block;
+}
+
+.markers:focus-within .marker__card_5, .markers:focus .marker__card_5 {
+	display: block;
+}
+
+.marker__card {
+	background-color: rgba(117,177,169,0.5);
+	color:white;
+	padding: 1.5rem;
+	display: none;
+	margin-top: -5%;
+	min-height: 200px;
+	position: absolute;
+  bottom: 32px;
+  right: 100px;
+	width: 100%;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	min-width: 300px;
+	max-width: 576px;
+	animation: fadeInUp;
+	animation-duration: .5s;
+	animation-fill-mode: both;
+}
+
+.marker__card_2 {
+	background-color: rgba(117,177,169,0.5);
+	color:white;
+	padding: 1.5rem;
+	display: none;
+	margin-top: -5%;
+	min-height: 200px;
+	position: absolute;
+  bottom: -30px;
+  left: 100px;
+	width: 100%;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	min-width: 300px;
+	max-width: 576px;
+	animation: fadeInUp;
+	animation-duration: .5s;
+	animation-fill-mode: both;
+}
+
+.marker__card_3 {
+	background-color: rgba(117,177,169,0.5);
+	color:white;
+	padding: 1.5rem;
+	display: none;
+	margin-top: -5%;
+	min-height: 200px;
+	position: absolute;
+  bottom: -30px;
+  right: 100px;
+	width: 100%;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	min-width: 300px;
+	max-width: 576px;
+	animation: fadeInUp;
+	animation-duration: .5s;
+	animation-fill-mode: both;
+}
+
+.marker__card_4 {
+	background-color: rgba(117,177,169,0.5);
+	color:white;
+	padding: 1.5rem;
+	display: none;
+	margin-top: -5%;
+	min-height: 200px;
+	position: absolute;
+  bottom: -30px;
+  right: 100px;
+	width: 100%;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	min-width: 300px;
+	max-width: 576px;
+	animation: fadeInUp;
+	animation-duration: .5s;
+	animation-fill-mode: both;
+}
+
+.marker__card_5 {
+	background-color: rgba(117,177,169,0.5);
+	color:white;
+	padding: 1.5rem;
+	display: none;
+	margin-top: -5%;
+	min-height: 200px;
+	position: absolute;
+  bottom: -30px;
+  left: 100px;
+	width: 100%;
+	z-index: 100;
+	-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+	min-width: 300px;
+	max-width: 576px;
+	animation: fadeInUp;
+	animation-duration: .5s;
+	animation-fill-mode: both;
+}
+<!----- end ----- >
+
+@media screen and (max-width: 1200px) {
+  .marker__card{
+      position:relative;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .marker__card_2 {
+      position:relative;
+      margin: auto;
+      left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .marker__card_3 {
+      position:relative;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .marker__card_4 {
+      position:relative;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .marker__card_5 {
+      position:relative;
+      margin: auto;
+  }
+}
+
+
+<!----- This code comes from https://codepen.io/hellolorem/pen/VwvMeoz ----- >
+.card-image{
+    max-height: 450px;
+    max-width: 576px;
+}
+
+.marker__card__title {
+  font: 31px/1.2 'Georgia', serif;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.marker__card__title_2 {
+  font: 17px/1.2 'Georgia', serif;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@keyframes ownpulse {
+	0% {
+	    -webkit-box-shadow: 0 0 0 0 #fff;
+	    box-shadow: 0 0 0 0 #fff;
+	}
+	50% {
+	    -webkit-box-shadow: 0 0 0 40px rgba(92,112,214,0);
+	    box-shadow: 0 0 0 40px rgba(92,112,214,0);
+	}
+	0% {
+	    -webkit-box-shadow: 0 0 0 0 #fff;
+	    box-shadow: 0 0 0 0 #fff;
+	}
+	50% {
+	    -webkit-box-shadow: 0 0 0 40px rgba(92,112,214,0);
+	    box-shadow: 0 0 0 40px rgba(92,112,214,0);
+	}
+}
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		transform: scale3d(.3,.3,.3);
+		-webkit-transform: scale3d(.3,.3,.3);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+@keyframes fadeInUp {
+	0% {
+    opacity: 0;
+	transform: scale3d(.3,.3,.3) translate3d(0,100%,0);
+	-webkit-transform: scale3d(.3,.3,.3);
+    -webkit-transform: translate3d(0,100%,0);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: scale3d(.3,.3,.3) translate3d(0,100%,0);
+}
+100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
+}
+<!----- end ----- >
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+#myBtnContainer{
+	padding-left:24px;
+}
+
+.column {
+  -ms-flex: 33%; 
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.filterDiv {
+  float: left;
+  background-color: transparent;
+  text-align: center;
+  margin: 2px;
+  display: none;
+    position: relative;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.filterDiv:hover .overlay {
+  opacity: 1;
+}
+
+.overlay a{
+text-decoration:none;
+color:white;
+}
+
+.overlay a:hover {
+color:whitesmoke;
+    opacity: 0.5;
+}
